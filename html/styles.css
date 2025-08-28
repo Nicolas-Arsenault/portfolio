@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'handwritten';
+    src: url('fonts/handwritten.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'companies';
+    src: url('fonts/companies.otf');
+}
+
+body{
+    font-family: 'handwritten';
+}
+
+.companies {
+  width: 100px;    /* fixed width */
+  height: 100px;   /* fixed height */
+  object-fit: cover;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.connect-vertical {
+  position: absolute;
+  left: 56%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 30px; /* default height */
+  background-color: #8f8d8d;
+}
+
+/* smaller screens */
+@media (max-width: 576px) {
+  .connect-vertical {
+    height: 32px;
+  }
+}
+
+/* medium screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .connect-vertical {
+    height: 32px;
+  }
+}
+
+/* large screens */
+@media (min-width: 993px) {
+  .connect-vertical {
+    height: 32px;
+  }
+}
+
+.timeline{
+    color: #8f8d8d;
+    width: 120px;
+    text-align: right;
+    margin-right:1rem;
+    flex-shrink: 0;
+}
+
+#navigator{
+  position: fixed;       /* Always visible */
+  bottom: 2%;             /* Distance from top of viewport */
+  left: 49%;            /* Distance from left of viewport */
+  z-index: 1000;         /* Ensures it stays above other elements */
+
+  border-radius: 20%;
+  border: solid black;
+  background-color: rgba(235, 227, 227, 0.329);
+  text-align: center;
+  padding: 4px;
+  width: auto;
+}
