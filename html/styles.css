@@ -60,16 +60,47 @@ body{
     flex-shrink: 0;
 }
 
-#navigator{
-  position: fixed;       /* Always visible */
-  bottom: 2%;             /* Distance from top of viewport */
-  left: 49%;            /* Distance from left of viewport */
-  z-index: 1000;         /* Ensures it stays above other elements */
+  #navigator {
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 
-  border-radius: 20%;
-  border: solid black;
-  background-color: rgba(235, 227, 227, 0.329);
-  text-align: center;
-  padding: 4px;
-  width: auto;
-}
+    border: 1px solid #333;
+    border-radius: 12px;
+    background-color: rgba(235, 227, 227, 0.9);
+    text-align: center;
+    padding: 8px 16px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  #navigator nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #navigator nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  #navigator nav a i {
+    margin-right: 6px;
+    color: #555;
+  }
+
+  #navigator nav a:hover {
+    color: #0077cc;
+  }
+
+  #navigator nav a:hover i {
+    color: #0077cc;
+  }
